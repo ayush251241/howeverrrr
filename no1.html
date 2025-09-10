@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22050818"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="100%"
+      >
+        <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a>
+        from
+        <a href="https://tenor.com/search/mochi-stickers">Mochi Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <h1><span class="sparkle-container">Are you sure? 🥺 Think again!</span></h1>
+      <p class="subtitle">
+        My heart is ready to take a chance. I hope you'll reconsider...
+      </p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no2.html">No</a>
+      </div>
+
+      <button id="playMusicBtn" class="play-btn">Play Music</button>
+    </div>
+
+    <audio id="background-music" loop muted>
+      <source src="second-song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      const music = document.getElementById('background-music');
+      const playBtn = document.getElementById('playMusicBtn');
+
+      playBtn.addEventListener('click', () => {
+        if (music.paused) {
+          music.muted = false; // Unmute the music
+          music.play();
+          playBtn.textContent = "Music On"; // Change button text
+        } else {
+          music.muted = true; // Mute the music
+          music.pause();
+          playBtn.textContent = "Music Off"; // Change button text
+        }
+      });
+    </script>
+  </body>
+</html>

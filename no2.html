@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Please Reconsider!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="15195810"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="100%"
+      >
+        <a
+          href="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810"
+          >Couple Forgive Me Sticker</a
+        >from
+        <a href="https://tenor.com/search/couple-stickers">Couple Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+
+      <h1><span class="sparkle-container">Ek aur baar Soch le! 😣</span></h1>
+      <p class="subtitle">Are you really, truly sure? My heart is breaking, but I still hope you'll change your mind.</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no3.html">No</a>
+      </div>
+      
+      <button id="playMusicBtn" class="play-btn">Play Music</button>
+    </div>
+
+    <audio id="background-music" muted loop>
+      <source src="third-songpart1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      const music = document.getElementById('background-music');
+      const playBtn = document.getElementById('playMusicBtn');
+      let isPlaying = false;
+
+      playBtn.addEventListener('click', () => {
+        if (!isPlaying) {
+          music.muted = false;
+          music.play();
+          
+          playBtn.textContent = "Music On";
+          isPlaying = true;
+        } else {
+          music.muted = true;
+          music.pause();
+
+          playBtn.textContent = "Music Off";
+          isPlaying = false;
+        }
+      });
+    </script>
+  </body>
+</html>
